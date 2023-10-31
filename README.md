@@ -1,0 +1,3 @@
+Aplicación para una empresa de reparto de comida que necesita poder rastrear en tiempo real donde se encuentra cada pedido y el vehículo/conductor que lo lleva.
+
+Para el mecanismo de comunicación entre aplicaciones de los conductores y la api, vamos a utiliar un sistema de notificaciones basado en la nube como FireBase, que permite la comunicación del servidor con los clientes sin la intervención del usuario, utilizando la API propia del servicio (FCM)
