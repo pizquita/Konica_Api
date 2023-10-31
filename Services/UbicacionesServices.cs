@@ -26,6 +26,7 @@ namespace KonicaApi.Services
             _iposRepository = iposRepository;
         }
 
+        ///Servicio que se encarga de solicitar la actualización de la posición a la aplicación
         public async Task<bool> ActualizarPosicionPedido(int idPedido)
         {                  
             var token = _iposRepository.ObtenerToken(idPedido);

@@ -17,7 +17,7 @@ namespace KonicaApi.Controllers
             _pedidosRepository = pedidosRepository;
         }
 
-
+        ///Endpoint que inserta un pedido en BBDD
         [HttpPost(Name = "inserta-pedido")]
         public IActionResult InsertarPedido(PedidoDto pedidosDto)
         {
@@ -27,7 +27,7 @@ namespace KonicaApi.Controllers
                 return BadRequest();             
         }
 
-        
+        ///Endpoint para eliminar pedidos de la BBDD
         [HttpPost(Name = "borrar-pedido")]
         public IActionResult EliminarPedido(int idPedido)
         {

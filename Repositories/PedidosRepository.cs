@@ -38,6 +38,7 @@ namespace KonicaApi.Repositories
             return new PedidoDto();            
         }
 
+        ///Obtiene el token de un conductor/vehículo asociado a un pedido
         public string ObtenerToken(int idPedido)
         {
             return "token";

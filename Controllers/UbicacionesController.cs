@@ -18,7 +18,7 @@ namespace KonicaApi.Controllers
             _ubicacionesServices = ubicacionesServices;            
         }
 
-       
+        ///Endpoint al que se llama con un idPedido para que la aplicación envíe su informción a la api
         [HttpGet(Name = "actualizar-posicion")]
         public async Task<IActionResult> SolicitarPosicion(int idPedido)
         {
@@ -27,17 +27,15 @@ namespace KonicaApi.Controllers
             else return BadRequest();       
         }
 
+        ///Endpoint que obtiene la última posición de la bbdd de un pedido
         [HttpGet(Name = "obtener-posicion-pedido")]        
         public IActionResult ObtenerUltimaPosicion(int idPedido)
         {
             return (IActionResult)_ubicacionesServices.ObtenerUbicacion(idPedido);
         }
 
-        /// <summary>
-        /// Este es el endpoint al que llama la app cada vez que se le solicita la posición y lo inserta en BBDD
-        /// </summary>
-        /// <param name="RecibirPosicion"></param>
-        /// <returns></returns>
+        
+        /// Este es el endpoint al que llama la app cada vez que se le solicita la posición y lo inserta en BBDD       
         [HttpPost (Name = "recibir-posicion")]
         public async Task<IActionResult> RecibirPosicion([FromBody] UbicacionDto ubicacionDto)
         {

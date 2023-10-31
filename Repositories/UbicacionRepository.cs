@@ -17,14 +17,15 @@ namespace KonicaApi.Repositories
             _repo = repo;
         }
 
+        //Obtiene la última posición de un pedido en bbdd
         public UbicacionDto ObtenerPosicionPedido(int idPedido)
         {
             return new UbicacionDto();
         }
 
+        ///inserta en la tabla de PosicionPedido para mantener el histórico de posiciones
         public int InsertarPosicionPedido(UbicacionDto ubicacionDto)
         {
-            //inserta en la tabla de PosicionPedido
             return 0;
         }
     }
